@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { describe, expect, test } from 'vitest';
 
-const describes = Array.from({ length: 76 }).map(() => ({ title: faker.company.catchPhrase() }));
+const describes = Array.from({ length: 50 }).map(() => ({ title: faker.company.catchPhrase() }));
 const tests = Array.from({ length: 50 }).map((_, i) => ({ title: faker.hacker.phrase(), index: i + 1 }));
 
 describe.each(describes)('$title', () => {
