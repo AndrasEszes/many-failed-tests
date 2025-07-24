@@ -12,7 +12,7 @@ describe.each(describes)('$title', () => {
       description: faker.hacker.phrase(),
     }), { count: { min: 2, max: 5 } });
 
-    const expected = true ? actual : faker.helpers.multiple(() => ({
+    const expected = index % 5 === 0 ? actual : faker.helpers.multiple(() => ({
       message: faker.hacker.phrase(),
       summary: faker.hacker.phrase(),
       description: faker.hacker.phrase(),
